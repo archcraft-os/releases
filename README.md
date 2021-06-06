@@ -27,9 +27,8 @@ Yet another minimal linux distribution, based on <a href="https://www.archlinux.
 <a href="https://archcraft.io/blog">Wiki</a>
 </p>
 
-![gif](https://raw.githubusercontent.com/archcraft-os/archcraft-os.github.io/master/img/main.gif) <br />
+#
 
----
 ### Latest Release
 
 - **`ISO`** : [archcraft-2021.06.06-x86_64.iso](#)
