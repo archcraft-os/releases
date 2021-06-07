@@ -35,6 +35,7 @@ Yet another minimal linux distribution, based on <a href="https://www.archlinux.
 - **`SIG`** : [archcraft-2021.06.06-x86_64.iso.sig](https://github.com/archcraft-os/releases/releases/download/v21.06/archcraft-2021.06.06-x86_64.iso.sig)
 - **`SHA`** : [archcraft-2021.06.06-x86_64.iso.sha256sum](https://github.com/archcraft-os/releases/releases/download/v21.06/archcraft-2021.06.06-x86_64.iso.sha256sum)
 `de3781ce9016b83c92140ba673c6b3491ebe00a8daf6e561baf83fd7e1c1882f`
+- **`TORRENT`** : [archcraft-2021.06.06-x86_64.iso.torrent](https://github.com/archcraft-os/releases/releases/download/v21.06/archcraft-2021.06.06-x86_64.iso.torrent)
 
 ### Verify the authenticity of the ISO
 
