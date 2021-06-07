@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://archcraft.io"><img src="https://raw.githubusercontent.com/archcraft-os/archcraft-misc-pkgs/main/archcraft-pixmaps/src/icons/archcraft.png" height="150" width="150" alt="Archcraft"></a>
+<a href="https://archcraft.io"><img src="https://raw.githubusercontent.com/archcraft-os/archcraft-misc-pkgs/main/archcraft-pixmaps/src/icons/archcraft.png" height="100" width="100" alt="Archcraft"></a>
 </p>
 
 <p align="center">
@@ -20,7 +20,7 @@ Yet another minimal linux distribution, based on <a href="https://www.archlinux.
 </p>
 
 <p align="center">
-<a href="https://archcraft.io">Homepage</a> | 
+<a href="https://archcraft.io">Home</a> | 
 <a href="https://archcraft.io/install">Installation</a> | 
 <a href="https://archcraft.io/features">Features</a> | 
 <a href="https://archcraft.io/gallery">Screenshots</a> | 
@@ -31,9 +31,9 @@ Yet another minimal linux distribution, based on <a href="https://www.archlinux.
 
 ### Latest Release
 
-- **`ISO`** : [archcraft-2021.06.06-x86_64.iso](#)
-- **`SIG`** : [archcraft-2021.06.06-x86_64.iso.sig](#)
-- **`SHA`** : [archcraft-2021.06.06-x86_64.iso.sha256sum](#)
+- **`ISO`** : [archcraft-2021.06.06-x86_64.iso](https://github.com/archcraft-os/releases/releases/download/v21.06/archcraft-2021.06.06-x86_64.iso)
+- **`SIG`** : [archcraft-2021.06.06-x86_64.iso.sig](https://github.com/archcraft-os/releases/releases/download/v21.06/archcraft-2021.06.06-x86_64.iso.sig)
+- **`SHA`** : [archcraft-2021.06.06-x86_64.iso.sha256sum](https://github.com/archcraft-os/releases/releases/download/v21.06/archcraft-2021.06.06-x86_64.iso.sha256sum)
 `de3781ce9016b83c92140ba673c6b3491ebe00a8daf6e561baf83fd7e1c1882f`
 
 ### Verify the authenticity of the ISO
@@ -52,5 +52,5 @@ $ gpg --verify archcraft-2021.06.06-x86_64.iso.sig
 
 - Finally, Verify the `sha256sum` by running :
 ```
-$ sha256sum archcraft-2021.06.06-x86_64.iso
+$ sha256sum -c archcraft-2021.06.06-x86_64.iso.sha256sum
 ```
