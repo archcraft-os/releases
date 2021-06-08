@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
 ## Generate sha256sum and gpg signature files
+PWD=`pwd`
+DIR="$PWD/files"
 
-DIR="`pwd`/files"
-RELEASE=`ls --hide=README.md $DIR | head -n 1`
+if [[ ! -d "$DIR" ]]; then
+	mkdir -p "$DIR"
+fi
+
+RELEASE=`ls $DIR | head -n 1`
 
 if [[ -n "$RELEASE" ]]; then
 	echo -e "\n[*] Generating sha256sum for ${RELEASE} ..."
@@ -22,6 +27,6 @@ if [[ -n "$RELEASE" ]]; then
 		echo -e "\n[*] Failed to generate signature file.\n"
 	fi
 else
-	echo -e "\n[!] There's no ISO file in 'files' directory.\n"
+	echo -e "\n[!] There's no ISO file in 'files' directory.\n[!] Copy the ISO file in 'files' directory & Run this script again.\n"
 	exit 1
 fi

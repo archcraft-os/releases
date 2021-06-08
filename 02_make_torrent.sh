@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 
 # Make torrent file for Archcraft ISO
-
-DIR="`pwd`/files"
+PWD=`pwd`
+DIR="$PWD/files"
 TRACKERS="/tmp/trackers.txt"
-RELEASE=`ls --hide=README.md $DIR | head -n 1`
+RELEASE=`ls $DIR | head -n 1`
+VER=`echo $RELEASE | cut -d '-' -f 2 | cut -d '.' -f 1,2`
+TAG="v${VER:2}"
 
 # Web seed urls
-WEB_SEED=(https://github.com/archcraft-os/releases/releases/download/v21.06/${RELEASE}
-		  https://github.com/archcraft-os/releases/releases/download/v21.06/${RELEASE}.sha256sum
-		  https://github.com/archcraft-os/releases/releases/download/v21.06/${RELEASE}.sig
+WEB_SEED=(https://github.com/archcraft-os/releases/releases/download/${TAG}/${RELEASE}
+		  https://github.com/archcraft-os/releases/releases/download/${TAG}/${RELEASE}.sha256sum
+		  https://github.com/archcraft-os/releases/releases/download/${TAG}/${RELEASE}.sig
 )
 _webseed_urls=`echo ${WEB_SEED[@]} | sed 's/ /,/g'`
 

@@ -4,7 +4,7 @@
 
 DIR=`pwd`
 FILE="$DIR/README.md"
-RELEASE=`ls --hide=README.md $DIR/files | head -n 1`
+RELEASE=`ls $DIR/files | head -n 1`
 URL="https://github.com/archcraft-os/releases/releases/download"
 SITE="https://archcraft.io"
 VER=`echo $RELEASE | cut -d '-' -f 2 | cut -d '.' -f 1,2`
@@ -85,6 +85,7 @@ _EOF_
 
 if [[ `cat $FILE | wc -l` -eq "60" ]]; then
 	echo -e "\n[*] File generated successfully.\n"
+	rm -rf "$DIR/files"
 	exit 0
 else
 	echo -e "\n[*] Failed to generate file.\n"
