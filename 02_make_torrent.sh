@@ -32,9 +32,8 @@ echo -e "\n[*] Creating file torrent for ${RELEASE} ...\n"
 mktorrent --announce="$_trackers_urls"\
 		  --web-seed="$_webseed_urls"\
 		  --comment="$RELEASE"\
-		  --name="$RELEASE"\
+		  --name="${RELEASE%.*}"\
 		  --output="$DIR/${RELEASE}.torrent"\
-		  --private\
 		  --verbose\
 		  "$DIR"
 
