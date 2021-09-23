@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
-# Make torrent file for Archcraft ISO
+## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+
+## Make torrent file for Archcraft ISO
 PWD=`pwd`
 DIR="$PWD/files"
 TRACKERS="/tmp/trackers.txt"
-RELEASE=`ls $DIR | head -n 1`
-VER=`echo $RELEASE | cut -d '-' -f 2 | cut -d '.' -f 1,2`
+RELEASE=`find $DIR -type f -name "archcraft-*.iso" -printf "%f\n"`
+VER=`echo $RELEASE | cut -d'-' -f2 | cut -d'.' -f 1,2`
 TAG="v${VER:2}"
 
 # Web seed urls
@@ -19,11 +22,11 @@ _webseed_urls=`echo ${WEB_SEED[@]} | sed 's/ /,/g'`
 echo -e "\n[*] Getting most updated list of public BitTorrent trackers...\n"
 curl -L -o ${TRACKERS} https://ngosang.github.io/trackerslist/trackers_best.txt
 
-if [[ -f "$TRACKERS" ]]; then
+if [[ -e "$TRACKERS" ]]; then
 	_tracker=(`cat ${TRACKERS} | sed -r '/^\s*$/d'`)
 	_trackers_urls=`echo ${_tracker[@]} | sed 's/ /,/g'`
 else
-	echo -e "\n[*] File ${TRACKERS} does not exist."
+	echo -e "\n[!] File ${TRACKERS} does not exist."
 	exit 1
 fi
 
@@ -37,8 +40,8 @@ mktorrent --announce="$_trackers_urls"\
 		  --verbose\
 		  "$DIR"
 
-if [[ -f "$DIR/${RELEASE}.torrent" ]]; then 
+if [[ -e "$DIR/${RELEASE}.torrent" ]]; then 
 	echo -e "\n[*] Torrent created successfully.\n"
 else
-	echo -e "\n[*] Failed to create torrent.\n"
+	echo -e "\n[!] Failed to create torrent.\n"
 fi

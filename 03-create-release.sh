@@ -1,17 +1,20 @@
 #!/usr/bin/env bash
 
-# Create new release and upload release assets
+## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+
+## Create new release and upload release assets
 
 DIR=`pwd`
 RFILE="$DIR/rnotes"
-RELEASE=`ls $DIR/files | head -n 1`
-VER=`echo $RELEASE | cut -d '-' -f 2 | cut -d '.' -f 1,2`
+RELEASE=`find $DIR -type f -name "archcraft-*.iso" -printf "%f\n"`
+VER=`echo $RELEASE | cut -d'-' -f2 | cut -d'.' -f 1,2`
 TAG="v${VER:2}"
 KEY="7DC81F73"
 
 # Check if hub is installed or not
 check_hub() {
-	if [[ ! -f '/usr/bin/hub' ]]; then
+	if [[ ! -x `which hub` ]]; then
 		echo -e "\n[*] 'hub' is not installed, exiting...\n"
 		exit 1
 	fi
@@ -36,7 +39,9 @@ create_notes() {
 
 		- Verify **\`GPG Signature\`**
 		\`\`\`
-		\$ gpg --recv-keys ${KEY}
+		\$ gpg --keyserver hkps://keys.gnupg.net --recv-keys ${KEY}
+		\$ gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys ${KEY}
+		\$ gpg --keyserver hkp://pgp.mit.edu --recv-keys ${KEY}
 
 		\$ gpg --verify ${RELEASE}.sig
 		\`\`\`
@@ -49,7 +54,7 @@ create_notes() {
 	_EOF_
 	
 	echo -e "\n[*] Opening release notes file to edit changelogs..."
-	if [[ -e "/usr/bin/leafpad" ]]; then
+	if [[ -x "/usr/bin/leafpad" ]]; then
 		leafpad "$RFILE"
 	else
 		vim "$RFILE"
@@ -58,7 +63,7 @@ create_notes() {
 	
 # Create New release
 create_tag() {
-	echo -e "\n[*] Creating a new release tag : ${TAG}"	
+	echo -e "\n[*] Creating a new release tag : ${TAG}"
 	hub release create -oc -F "$RFILE" ${TAG}
 }
 
