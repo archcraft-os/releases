@@ -1,11 +1,11 @@
 <p align="center">
-<a href="https://archcraft.io"><img src="https://raw.githubusercontent.com/archcraft-os/archcraft-misc-pkgs/main/archcraft-pixmaps/src/icons/archcraft.png" height="100" width="100" alt="Archcraft"></a>
+<a href="https://archcraft.io"><img src="https://raw.githubusercontent.com/archcraft-os/archcraft-packages/main/archcraft-artworks/files/logo/png/logo-circle/logo-circle-1.png" height="100" width="100" alt="Archcraft"></a>
 </p>
 
 <p align="center">
 <a href="https://www.buymeacoffee.com/adi1090x"><img width="32px" src="https://raw.githubusercontent.com/adi1090x/files/master/other/1.png" alt="Buy Me A Coffee"></a>
-<a href="https://ko-fi.com/adi1090x"><img width="32px" src="https://raw.githubusercontent.com/adi1090x/files/master/other/2.png" alt="Support me on ko-fi"></a>
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=U3VK2SSVQWAPN"><img width="32px" src="https://raw.githubusercontent.com/adi1090x/files/master/other/3.png" alt="Support me on Paypal"></a>
+<a href="https://ko-fi.com/adi1090x"><img width="32px" src="https://raw.githubusercontent.com/adi1090x/files/master/other/2.png" alt="Donate for Archcraft on ko-fi"></a>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6VETHHYHXESRN"><img width="32px" src="https://raw.githubusercontent.com/adi1090x/files/master/other/3.png" alt="Donate for Archcraft via Paypal"></a>
 </p>
 
 <p align="center">
@@ -20,41 +20,44 @@ Yet another minimal linux distribution, based on <a href="https://www.archlinux.
 </p>
 
 <p align="center">
-<a href="https://archcraft.io">Home</a> | 
-<a href="https://archcraft.io/install">Installation</a> | 
-<a href="https://archcraft.io/features">Features</a> | 
-<a href="https://archcraft.io/gallery">Screenshots</a> | 
-<a href="https://archcraft.io/blog">Blog</a> | 
-<a href="https://archcraft.io/wiki">Wiki</a>
+  <a href="https://archcraft.io" target="_blank"><img alt="home" src="https://img.shields.io/badge/HOME-blue?style=flat-square"></a>
+  <a href="https://wiki.archcraft.io" target="_blank"><img alt="wiki" src="https://img.shields.io/badge/WIKI-blue?style=flat-square"></a>
+  <a href="https://archcraft.io/gallery" target="_blank"><img alt="screenshots" src="https://img.shields.io/badge/SCREENSHOTS-blue?style=flat-square"></a>
+  <a href="https://www.reddit.com/r/archcraft" target="_blank"><img alt="reddit" src="https://img.shields.io/badge/REDDIT-blue?style=flat-square"></a>
+  <a href="https://discord.gg/3PzeJ5S7Pu" target="_blank"><img alt="discord" src="https://img.shields.io/badge/DISCORD-blue?style=flat-square"></a>
+  <a href="https://t.me/archcraftos" target="_blank"><img alt="telegram" src="https://img.shields.io/badge/TELEGRAM-blue?style=flat-square"></a>
+  <a href="https://matrix.to/#/#archcraft:matrix.org" target="_blank"><img alt="matrix" src="https://img.shields.io/badge/MATRIX-blue?style=flat-square"></a>
 </p>
 
-![img](./.screens.png)
+![img](https://raw.githubusercontent.com/archcraft-os/core-packages/main/calamares-config/files/calamares/branding/archcraft/welcome.png)
 
 #
 
 ### Latest Release
 
-- **`ISO`** : [archcraft-2021.06.06-x86_64.iso](https://github.com/archcraft-os/releases/releases/download/v21.06/archcraft-2021.06.06-x86_64.iso)
-- **`SIG`** : [archcraft-2021.06.06-x86_64.iso.sig](https://github.com/archcraft-os/releases/releases/download/v21.06/archcraft-2021.06.06-x86_64.iso.sig)
-- **`SHA`** : [archcraft-2021.06.06-x86_64.iso.sha256sum](https://github.com/archcraft-os/releases/releases/download/v21.06/archcraft-2021.06.06-x86_64.iso.sha256sum)
-`de3781ce9016b83c92140ba673c6b3491ebe00a8daf6e561baf83fd7e1c1882f`
-- **`TORRENT`** : [archcraft-2021.06.06-x86_64.iso.torrent](https://github.com/archcraft-os/releases/releases/download/v21.06/archcraft-2021.06.06-x86_64.iso.torrent)
+- **`ISO`** : [archcraft-2021.09.25-x86_64.iso](https://github.com/archcraft-os/releases/releases/download/v21.09/archcraft-2021.09.25-x86_64.iso)
+- **`SIG`** : [archcraft-2021.09.25-x86_64.iso.sig](https://github.com/archcraft-os/releases/releases/download/v21.09/archcraft-2021.09.25-x86_64.iso.sig)
+- **`SHA`** : [archcraft-2021.09.25-x86_64.iso.sha256sum](https://github.com/archcraft-os/releases/releases/download/v21.09/archcraft-2021.09.25-x86_64.iso.sha256sum)
+`486d4336e563a4545788cd43ce69224e3ff539f65af17e4fc9b5ac2ef54a8cfd`
+- **`TORRENT`** : [archcraft-2021.09.25-x86_64.iso.torrent](https://github.com/archcraft-os/releases/releases/download/v21.09/archcraft-2021.09.25-x86_64.iso.torrent)
 
 ### Verify the authenticity of the ISO
 
 - Download the **`ISO`**, **`gpg signature`** and **`sha256sum`** files
 - Make sure all the files are present in the same directory (Assuming `~/Downloads`)
-- First, Verify the details of the key on keyserver, Open a terminal and run :
+- First, Verify the details of the key on keyserver, Open a terminal and run (any one):
 ```
-$ gpg --recv-keys 7DC81F73
+$ gpg --keyserver hkps://keys.gnupg.net --recv-keys 7DC81F73
+$ gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys 7DC81F73
+$ gpg --keyserver hkp://pgp.mit.edu --recv-keys 7DC81F73
 ```
 
 - Then, Open `terminal` in the `~/Downloads` folder and run following command :
 ```
-$ gpg --verify archcraft-2021.06.06-x86_64.iso.sig
+$ gpg --verify archcraft-2021.09.25-x86_64.iso.sig
 ```
 
 - Finally, Verify the `sha256sum` by running :
 ```
-$ sha256sum -c archcraft-2021.06.06-x86_64.iso.sha256sum
+$ sha256sum -c archcraft-2021.09.25-x86_64.iso.sha256sum
 ```
