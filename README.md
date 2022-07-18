@@ -35,11 +35,11 @@ Yet another minimal linux distribution, based on <a href="https://www.archlinux.
 
 ### Latest Release
 
-- **`ISO`** : [archcraft-2022.06.08-x86_64.iso](https://github.com/archcraft-os/releases/releases/download/v22.06/archcraft-2022.06.08-x86_64.iso)
-- **`SIG`** : [archcraft-2022.06.08-x86_64.iso.sig](https://github.com/archcraft-os/releases/releases/download/v22.06/archcraft-2022.06.08-x86_64.iso.sig)
-- **`SHA`** : [archcraft-2022.06.08-x86_64.iso.sha256sum](https://github.com/archcraft-os/releases/releases/download/v22.06/archcraft-2022.06.08-x86_64.iso.sha256sum)
-`36eefb10c75046954b34c52760cd0c7b605c88f958c10ade29877de8c0625a82`
-- **`TORRENT`** : [archcraft-2022.06.08-x86_64.iso.torrent](https://github.com/archcraft-os/releases/releases/download/v22.06/archcraft-2022.06.08-x86_64.iso.torrent)
+- **`ISO`** : [archcraft-2022.07.18-x86_64.iso](https://github.com/archcraft-os/releases/releases/download/v22.07/archcraft-2022.07.18-x86_64.iso)
+- **`SIG`** : [archcraft-2022.07.18-x86_64.iso.sig](https://github.com/archcraft-os/releases/releases/download/v22.07/archcraft-2022.07.18-x86_64.iso.sig)
+- **`SHA`** : [archcraft-2022.07.18-x86_64.iso.sha256sum](https://github.com/archcraft-os/releases/releases/download/v22.07/archcraft-2022.07.18-x86_64.iso.sha256sum)
+`0ad595213b4a7d6af37aa2e0758cd4d0c4dd8b2216868343a90138b3492522bf`
+- **`TORRENT`** : [archcraft-2022.07.18-x86_64.iso.torrent](https://github.com/archcraft-os/releases/releases/download/v22.07/archcraft-2022.07.18-x86_64.iso.torrent)
 
 ### Verify the authenticity of the ISO
 
@@ -54,10 +54,10 @@ $ gpg --keyserver hkp://pgp.mit.edu --recv-keys 7DC81F73
 
 - Then, Open `terminal` in the `~/Downloads` folder and run following command :
 ```
-$ gpg --verify archcraft-2022.06.08-x86_64.iso.sig
+$ gpg --verify archcraft-2022.07.18-x86_64.iso.sig
 ```
 
 - Finally, Verify the `sha256sum` by running :
 ```
-$ sha256sum -c archcraft-2022.06.08-x86_64.iso.sha256sum
+$ sha256sum -c archcraft-2022.07.18-x86_64.iso.sha256sum
 ```
