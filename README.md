@@ -1,18 +1,12 @@
 <p align="center">
-  <a href="https://archcraft.io"><img src="https://raw.githubusercontent.com/archcraft-os/archcraft-packages/main/archcraft-artworks/files/logo/png/logo-circle/logo-circle-1.png" height="100" width="100" alt="Archcraft"></a>
-</p>
-
-<p align="center">
-  <a href="https://ko-fi.com/adi1090x"><img width="32px" src="https://raw.githubusercontent.com/archcraft-os/.github/main/profile/assets/1.png" alt="Donate for Archcraft on ko-fi"></a>&nbsp;
-  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6VETHHYHXESRN"><img width="32px" src="https://raw.githubusercontent.com/archcraft-os/.github/main/profile/assets/2.png" alt="Donate for Archcraft via Paypal"></a>&nbsp;
-  <a href="https://liberapay.com/adi1090x"><img width="32px" src="https://raw.githubusercontent.com/archcraft-os/.github/main/profile/assets/3.png" alt="Donate for Archcraft via Liberapay"></a>
+<a href="https://archcraft.io"><img src="https://raw.githubusercontent.com/archcraft-os/archcraft-packages/main/archcraft-artworks/files/logo/png/logo-circle/logo-circle-1.png" height="128" width="128" alt="Archcraft"></a>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=flat-square">
-  <img src="https://img.shields.io/github/downloads/archcraft-os/releases/total?label=downloads&logo=github&color=blue&style=flat-square">
   <img src="https://img.shields.io/sourceforge/dt/archcraft.svg?label=downloads&logo=sourceforge&color=teal&style=flat-square">
-  <img src="https://img.shields.io/github/license/archcraft-os/releases?color=orange&style=flat-square">
+  <img src="https://img.shields.io/github/stars/archcraft-os/archcraft?style=flat-square">
+  <img src="https://img.shields.io/github/issues/archcraft-os/archcraft?color=violet&style=flat-square">
 </p>
 
 <p align="center">
@@ -31,33 +25,24 @@ Yet another minimal linux distribution, based on <a href="https://www.archlinux.
 
 ![img](https://raw.githubusercontent.com/archcraft-os/core-packages/main/calamares-config/files/calamares/branding/archcraft/welcome.png)
 
+<p align="center">
+Archcraft is an <b>arch-based</b> rolling-release distribution aimed at users who cares more about <b><i>minimalism and aesthetics</i></b> of their desktop. It comes pre-configured with various lightweight applications which makes it super fast. It can run under 500Mb of memory. There are two window managers installed by default, <b>Openbox</b> and <b>Bspwm</b>.
+</p>
+
 #
+
+> This repository contains old released (before 2023). As the new ISOs increased in size more than 2GB, I can't release them on github due to it's limitations.
 
 ### Latest Release
 
-- **`ISO`** : [archcraft-2022.09.16-x86_64.iso](https://github.com/archcraft-os/releases/releases/download/v22.09/archcraft-2022.09.16-x86_64.iso)
-- **`SIG`** : [archcraft-2022.09.16-x86_64.iso.sig](https://github.com/archcraft-os/releases/releases/download/v22.09/archcraft-2022.09.16-x86_64.iso.sig)
-- **`SHA`** : [archcraft-2022.09.16-x86_64.iso.sha256sum](https://github.com/archcraft-os/releases/releases/download/v22.09/archcraft-2022.09.16-x86_64.iso.sha256sum)
-`f363e7dd5eb7c351d9264610ce2d877afec7030b8eeeb0fba40f1c92aa5f980a`
-- **`TORRENT`** : [archcraft-2022.09.16-x86_64.iso.torrent](https://github.com/archcraft-os/releases/releases/download/v22.09/archcraft-2022.09.16-x86_64.iso.torrent)
+**`Sourceforge`** : [Download](https://sourceforge.net/projects/archcraft/files/latest/download)
 
-### Verify the authenticity of the ISO
+#
 
-- Download the **`ISO`**, **`gpg signature`** and **`sha256sum`** files
-- Make sure all the files are present in the same directory (Assuming `~/Downloads`)
-- First, Verify the details of the key on keyserver, Open a terminal and run (any one):
-```
-$ gpg --keyserver hkps://keys.gnupg.net --recv-keys 7DC81F73
-$ gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys 7DC81F73
-$ gpg --keyserver hkp://pgp.mit.edu --recv-keys 7DC81F73
-```
+### From Archcraft Wiki
 
-- Then, Open `terminal` in the `~/Downloads` folder and run following command :
-```
-$ gpg --verify archcraft-2022.09.16-x86_64.iso.sig
-```
-
-- Finally, Verify the `sha256sum` by running :
-```
-$ sha256sum -c archcraft-2022.09.16-x86_64.iso.sha256sum
-```
+- [Things To Do After Installing Archcraft](https://wiki.archcraft.io/docs/install-archcraft/post-install)
+- [Install Archcraft With Calamares](https://wiki.archcraft.io/docs/install-archcraft/install-with-calamares)
+- [Install Archcraft With ABIF](https://wiki.archcraft.io/docs/install-archcraft/install-with-abif)
+- [Create A Bootable USB With Archcraft](https://wiki.archcraft.io/docs/boot-iso/boot-with-usb)
+- [Boot Archcraft ISO With GRUB2 Bootloader](https://wiki.archcraft.io/docs/boot-iso/boot-with-grub)
